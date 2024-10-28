@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit card</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/atmicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <div class="front face">
+                <img src="assets/logo.png" alt="Logo" class="logo" height="60" width="150">
+                <h3 class="classic">
+                    CLASSIC
+                </h3>
+                <img src="assets/chipp.png" alt="chip" class="chip" />
+                <h3 class="number" id="cardNumber">#### #### #### ####</h3>
+                <h5 class="valid" id="expiryDate">VALID <br>THRU <span id="expiryDisplay">MM/YY</span></h5>
+                <h5 class="cardHolder" id="cardHolder">Card Holder Name</h5>
+            </div>
+
+            <div class="back face">
+                <div class="helpline">
+                    <h5>for 24-Hour customer service, call domestic(042 or 021) 111-225-225 & International
+                        +9221-35301094</h5>
+                </div>
+                <div class="blackbar"></div>
+                <div class="cvvtext">
+                    <h5>AUTHORIZED SIGNATURE</h5>
+                    <div class="cvvBar">
+                        <div class="gray-line"></div>
+                        <div class="gray-line"></div>
+                        <div class="gray-line"></div>
+                    </div>
+                    <h3 class="cvv" id="cvv">###</h3>
+                </div>
+                <p class="terms">
+                    This card is the property of Allied Bank Limited. It is not
+                    transferable and may be revoked by the Bank at any time without
+                    notice. The use of this card is governed by the prevailing Terms and
+                    Conditions. If found, please return this card to any branch of the bank.
+                </p>
+
+            </div>
+        </div>
+        <!-- Card Details Input Form -->
+            <form id="cardForm">
+                <label for="cardNumberInput">Card Number:</label>
+                <input type="text" id="cardNumberInput" maxlength="16" required>
+            
+                <div class="expiry-date">
+                <label for="expiryMonthInput">Expiry Month (MM)</label>
+                <input type="text" id="expiryMonthInput" placeholder="MM" maxlength="2">
+            
+                <label for="expiryYearInput">&nbsp;Expiry &nbsp;Year (YY)</label>
+                <input type="text" id="expiryYearInput" placeholder="YY" maxlength="2">
+                </div>
+            
+                <label for="cardHolderInput">Card Holder Name:</label>
+                <input type="text" id="cardHolderInput" required>
+            
+                <label for="cvvInput">CVV:</label>
+                <input type="text" id="cvvInput" maxlength="3" required>
+            
+                <button type="button" onclick="storeCardDetails()">Submit</button>
+            </form>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
