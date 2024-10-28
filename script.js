@@ -1,29 +1,4 @@
-// function updateCardDetails() {
-//     // Get form values
-    
-//     const number = document.getElementById("cardNumberInput").value;
-//     const expiryMonth = document.getElementById("expiryMonthInput").value;
-//     const expiryYear = document.getElementById("expiryYearInput").value;
-//     const name = document.getElementById("cardHolderInput").value;
-//     const cvv = document.getElementById("cvvInput").value;
-
-//     // Format the expiry date by combining month and year
-//     const expiryDate = (expiryMonth && expiryYear) ? `${expiryMonth}/${expiryYear}` : "MM/YY";
-  
-//     // Update card details
-    
-//     document.getElementById("cardNumber").innerText = formatCardNumber(number);
-//     document.getElementById("expiryDate").innerText = expiryDate;
-//     document.getElementById("cardHolder").innerText = name;
-//     document.getElementById("cvv").innerText = cvv;
-//   }
-  
-//   function formatCardNumber(number) {
-//     return number.replace(/(\d{4})(?=\d)/g, "$1 ");
-//   }
-  
-  
-function storeCardDetails() {
+  function storeCardDetails() {
     // Get input values
     const cardNumber = document.getElementById('cardNumberInput').value;
     const cardHolder = document.getElementById('cardHolderInput').value;
